@@ -7,7 +7,11 @@ def isSorted(array) :
             return False
     return True
     
-array_normal = [random.randint(1,1000) for _ in range(1000)]
-array_best = [i for i in range(1000)]
-array_worst = [i for i in range(1000,-1,-1)]
-tcs = [array_normal, array_best, array_worst]
+def createTestCases() : 
+    array_normal = [random.randint(1,1000) for _ in range(1000)]
+    array_best = [i for i in range(1000)]
+    array_worst = [i for i in range(1000,-1,-1)]
+    return [array_normal, array_best, array_worst]
+
+if __name__ == "__main__" :
+    pass
