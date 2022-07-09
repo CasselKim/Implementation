@@ -1,4 +1,5 @@
 from typing import List
+from insertionSort import insertionSort, insertionSortBinarySearch
 import random
 
 def isSorted(array) :
@@ -14,4 +15,7 @@ def createTestCases() :
     return [array_normal, array_best, array_worst]
 
 if __name__ == "__main__" :
-    pass
+    
+    # insertion sort
+    assert(isSorted(insertionSort(tc)))
+    assert(isSorted(insertionSortBinarySearch(tc)))
