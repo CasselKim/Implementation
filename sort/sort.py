@@ -15,7 +15,10 @@ def createTestCases() :
     return [array_normal, array_best, array_worst]
 
 if __name__ == "__main__" :
-    
-    # insertion sort
-    assert(isSorted(insertionSort(tc)))
-    assert(isSorted(insertionSortBinarySearch(tc)))
+
+    test_cases = createTestCases()
+
+    for case in test_cases : 
+        # insertion sort
+        assert( isSorted(insertionSort(case)) )
+        assert( isSorted(insertionSortBinarySearch(case)) )
