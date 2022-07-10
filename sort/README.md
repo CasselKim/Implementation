@@ -44,3 +44,5 @@ def insertionSortBinarySearch(array) :
         
     return res
 ```
+![image](insertionSort1.png)  
+이진 탐색을 썼는데 그냥 했을 때 보다 느리다. 심지어 worst case일 때는 150배나 느린 것을 확인할 수 있다. 왜 그럴까?
