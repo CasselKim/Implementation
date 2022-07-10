@@ -6,34 +6,35 @@ def insertionSort(array) :
                 res.insert(j,array[i])
     return res
 
+
+def bisect_left(arr, x, lo=0, hi=None) : 
+    if lo < 0 :
+        raise(Exception("io must be non-negative"))
+    if hi is None : 
+        hi = len(arr)
+    while lo < hi : 
+        mid = (lo+hi)//2
+        if arr[mid] < x : 
+            lo = mid+1
+        else : 
+            hi = mid
+    return lo
+
+def insort_left(arr, x, lo=0, hi=None) : 
+    if lo < 0 :
+        raise(Exception("lo must be non-negative"))
+    if hi is None : 
+        hi = len(arr)
+    while lo<hi : 
+        mid = (lo+hi)//2
+        if arr[mid]<x : 
+            lo = mid+1
+        else : 
+            hi = mid
+    arr.insert(lo,x)
+
 def insertionSortBinarySearch(array) : 
     res = []
-    
-    def bisect_left(arr, x, lo=0, hi=None) : 
-        if lo < 0 :
-            raise(Exception("io must be non-negative"))
-        if hi is None : 
-            hi = len(arr)
-        while lo < hi : 
-            mid = (lo+hi)//2
-            if arr[mid] < x : 
-                lo = mid+1
-            else : 
-                hi = mid
-        return lo
-    
-    def insort_left(arr, x, lo=0, hi=None) : 
-        if lo < 0 :
-            raise(Exception("lo must be non-negative"))
-        if hi is None : 
-            hi = len(arr)
-        while lo<hi : 
-            mid = (lo+hi)//2
-            if arr[mid]<x : 
-                lo = mid+1
-            else : 
-                hi = mid
-        arr.insert(lo,x)
             
     for x in array : 
         insort_left(res,x)
