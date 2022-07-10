@@ -1,25 +1,26 @@
-from typing import List
+from typing import List, Dict
 from insertionSort import insertionSort, insertionSortBinarySearch
 import random
 import time
 
-def isSorted(array) :
+def isSorted(array:List[int]) -> bool :
     for i in range(1,len(array)) : 
         if array[i-1]>array[i] : 
             return False
     return True
     
-def createTestCases() : 
+def createTestCases() -> Dict[str,List[int]] : 
     array_normal = [random.randint(1,100000) for _ in range(100000)]
     array_best = [i for i in range(100000)]
     array_worst = [i for i in range(100000,-1,-1)]
     return {"array_normal":array_normal, "array_best":array_best, "array_worst":array_worst}
 
-def checkTimeFrom() : 
+def checkTimeFrom() -> float : 
     return time.time()
 
-def checkTimeTo(start,func_name) : 
+def checkTimeTo(start:float,func_name:str) -> None: 
     print("{} conducting time : {}".format(func_name,time.time()-start))
+    return 
 
 if __name__ == "__main__" :
 
