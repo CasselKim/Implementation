@@ -1,5 +1,5 @@
 from typing import List, Dict
-from insertionSort import insertionSort, insertionSortBinarySearch, insertionSortBisect
+from insertionSort import insertionSort, insertionSortBinarySearch, insertionSortBisect, linearSearch, binarySearch
 import random
 import time
 
@@ -10,9 +10,9 @@ def isSorted(array:List[int]) -> bool :
     return True
     
 def createTestCases() -> Dict[str,List[int]] : 
-    array_normal = [random.randint(1,1000000) for _ in range(1000000)]
-    array_best = [i for i in range(1000000)]
-    array_worst = [i for i in range(1000000,-1,-1)]
+    array_normal = [random.randint(1,10000) for _ in range(10000)]
+    array_best = [i for i in range(10000)]
+    array_worst = [i for i in range(10000,-1,-1)]
     return {"array_normal":array_normal, "array_best":array_best, "array_worst":array_worst}
 
 def checkTimeFrom() -> float : 
@@ -26,11 +26,13 @@ if __name__ == "__main__" :
 
     test_cases = createTestCases()
 
+    
     for case_type,case in test_cases.items() : 
 
         print("case :",case_type)
         
         # insertion sort
+        
         start = checkTimeFrom()
         assert( isSorted(insertionSort(case)) )
         checkTimeTo(start,"insertionSort")
@@ -40,6 +42,4 @@ if __name__ == "__main__" :
         start = checkTimeFrom()
         assert( isSorted(insertionSortBisect(case)) )
         checkTimeTo(start,"insertionSortBisect")
-
-
-        print()
+        
