@@ -1,3 +1,5 @@
+import bisect
+
 def insertionSort(array) : 
     res = []
     for i in range(len(array)) : 
@@ -38,5 +40,13 @@ def insertionSortBinarySearch(array) :
             
     for x in array : 
         insort_left(res,x)
+        
+    return res
+
+def insertionSortBisect(array) : 
+    res = []
+            
+    for x in array : 
+        bisect.insort(res,x)
         
     return res
