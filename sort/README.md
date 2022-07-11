@@ -39,8 +39,8 @@ def insertionSortBinarySearch(array) :
                 hi = mid
         arr.insert(lo,x)
             
-    for x in array : 
-        insort_left(res,x)
+    for i in range(len(array)) : 
+        insort_left(res,array[i])
         
     return res
 ```
