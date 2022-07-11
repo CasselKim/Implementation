@@ -50,3 +50,5 @@ def insertionSortBinarySearch(array) :
 local method에서 global method로 바꿔봤다. 미묘하게 빨라지긴 했지만 여전히 linear search보다 느리다.
 ![image](insertionSort3.png)
 bisect module로 돌려봤다. custom한 것 보다 빠를때도, 느릴때도 있다.
+![image](insertionSort4.png)
+linear search도 method로 만들어서 똑같은 조건 하에 테스트해보았더니 linear insertion이 더 느리게 나왔다. 함수 호출시간이 문제였나보다. 생각해보면 파라미터로 길이 1,000,000인 list를 stack에 계속 (나눠서) 넣어야 되니까 시간이 느렸던 것 같다.
