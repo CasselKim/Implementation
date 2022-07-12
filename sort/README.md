@@ -1,5 +1,6 @@
 # Sort Implementation
 ## Insertion Sort
+### code
 ```python
 def insertionSort(array) : 
     res = []
@@ -24,4 +25,5 @@ def insertionSortBisect(array) :
         res.insert(j,array[i])
     return res
 ```
+### result
 ![image](insertionSort.png)
