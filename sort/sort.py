@@ -1,6 +1,7 @@
 from typing import List, Dict
 from insertionSort import insertionSort, insertionSortBinarySearch, insertionSortBisect, linearSearch, binarySearch
 from bubbleSort import bubbleSort
+from selectionSort import selectionSort
 import random
 import time
 
@@ -45,4 +46,8 @@ if __name__ == "__main__" :
 
         start = checkTimeFrom()
         assert( isSorted(bubbleSort(case)) )
+        checkTimeTo(start,"bubbleSort")
+
+        start = checkTimeFrom()
+        assert( isSorted(selectionSort(case)) )
         checkTimeTo(start,"bubbleSort")
