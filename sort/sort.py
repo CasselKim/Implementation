@@ -33,7 +33,7 @@ if __name__ == "__main__" :
 
         print("case :",case_type)
         
-        # insertion sort
+        # Insertion sort
         start = checkTimeFrom()
         assert( isSorted(insertionSort(case)) )
         checkTimeTo(start,"insertionSort")
@@ -44,10 +44,12 @@ if __name__ == "__main__" :
         assert( isSorted(insertionSortBisect(case)) )
         checkTimeTo(start,"insertionSortBisect")
 
+        # Bubble Sort
         start = checkTimeFrom()
         assert( isSorted(bubbleSort(case)) )
         checkTimeTo(start,"bubbleSort")
 
+        # Selection Sort
         start = checkTimeFrom()
         assert( isSorted(selectionSort(case)) )
         checkTimeTo(start,"bubbleSort")
