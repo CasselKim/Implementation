@@ -52,4 +52,4 @@ if __name__ == "__main__" :
         # Selection Sort
         start = checkTimeFrom()
         assert( isSorted(selectionSort(case)) )
-        checkTimeTo(start,"bubbleSort")
+        checkTimeTo(start,"selectionSort")
