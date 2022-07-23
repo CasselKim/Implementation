@@ -2,6 +2,10 @@ from decorator import playtime
 
 @playtime
 def mergeSort(array) : 
+    print("merge sort : ",end='')
+    return merge(array)
+
+def merge(array) : 
 
     if len(array)<=1 : 
         return array
@@ -10,8 +14,8 @@ def mergeSort(array) :
     m = len(array)//2
 
     res = []
-    arr1 = mergeSort(array[l:m])[::-1]
-    arr2 = mergeSort(array[m:r])[::-1]
+    arr1 = merge(array[l:m])[::-1]
+    arr2 = merge(array[m:r])[::-1]
     while arr1 and arr2 : 
         if arr1[-1]<arr2[-1] : 
             res.append(arr1.pop())
