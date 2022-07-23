@@ -1,8 +1,9 @@
 import time
 
 def playtime(func) : 
-    def wrapper() : 
+    def wrapper(*args, **kwargs) : 
         start = time.time()
-        func()
+        res = func(*args, **kwargs)
         print(time.time()-start)
+        return res
     return wrapper
