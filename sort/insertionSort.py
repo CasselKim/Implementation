@@ -1,6 +1,9 @@
 import bisect
+from decorator import playtime
 
+@playtime
 def insertionSort(array) : 
+    print("insertion sort : ",end='')
     res = []
     for i in range(len(array)) : 
         j = linearSearch(res,array[i])
@@ -33,14 +36,18 @@ def insort_left(arr, x, lo=0, hi=None) :
             hi = mid
     arr.insert(lo,x)
 
+@playtime
 def insertionSortBinarySearch(array) : 
+    print("insertion sort (binary sort) : ",end='')
     res = []
     for i in range(len(array)) : 
         j = binarySearch(res,array[i])
         res.insert(j,array[i])
     return res
 
+@playtime
 def insertionSortBisect(array) : 
+    print("insertion sort (bisect module) : ",end='')
     res = []
     for i in range(len(array)) : 
         j = bisect.bisect_left(res,array[i])

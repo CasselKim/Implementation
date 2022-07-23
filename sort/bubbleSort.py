@@ -1,4 +1,8 @@
+from decorator import playtime
+
+@playtime
 def bubbleSort(array) : 
+    print("bubble sort : ",end='')
     swap = True
     while swap : 
         swap = False

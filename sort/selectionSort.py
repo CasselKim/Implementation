@@ -1,4 +1,8 @@
+from decorator import playtime
+
+@playtime
 def selectionSort(arr) : 
+    print("selection sort : ",end='')
     for i in range(len(arr)) : 
         minimum = (arr[i], i)
         for j in range(i,len(arr)) : 
