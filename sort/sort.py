@@ -18,44 +18,26 @@ def createTestCases() -> Dict[str,List[int]] :
     array_worst = [i for i in range(10000,-1,-1)]
     return {"array_normal":array_normal, "array_best":array_best, "array_worst":array_worst}
 
-def checkTimeFrom() -> float : 
-    return time.time()
-
-def checkTimeTo(start:float,func_name:str) -> None: 
-    print("{} conducting time : {}".format(func_name,time.time()-start))
-    return 
-
 if __name__ == "__main__" :
 
     test_cases = createTestCases()
-
     
     for case_type,case in test_cases.items() : 
 
         print("case :",case_type)
         
-        # Insertion sort
-        start = checkTimeFrom()
+        # Insertion Sort
         assert( isSorted(insertionSort(case)) )
-        checkTimeTo(start,"insertionSort")
-        start = checkTimeFrom()
         assert( isSorted(insertionSortBinarySearch(case)) )
-        checkTimeTo(start,"insertionSortBinarySearch")
-        start = checkTimeFrom()
         assert( isSorted(insertionSortBisect(case)) )
-        checkTimeTo(start,"insertionSortBisect")
 
         # Bubble Sort
-        start = checkTimeFrom()
         assert( isSorted(bubbleSort(case)) )
-        checkTimeTo(start,"bubbleSort")
 
         # Selection Sort
-        start = checkTimeFrom()
         assert( isSorted(selectionSort(case)) )
-        checkTimeTo(start,"selectionSort")
 
         # Merge Sort
-        start = checkTimeFrom()
         assert( isSorted(mergeSort(case)) )
-        checkTimeTo(start,"mergeSort")
+
+        print()
