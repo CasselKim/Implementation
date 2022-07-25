@@ -3,6 +3,7 @@ from insertionSort import insertionSort, insertionSortBinarySearch, insertionSor
 from bubbleSort import bubbleSort
 from selectionSort import selectionSort
 from mergeSort import mergeSort
+from quickSort import quickSort
 import random
 import time
 
@@ -26,18 +27,22 @@ if __name__ == "__main__" :
 
         print("case :",case_type)
         
+        
         # Insertion Sort
-        assert( isSorted(insertionSort(case)) )
-        assert( isSorted(insertionSortBinarySearch(case)) )
-        assert( isSorted(insertionSortBisect(case)) )
+        assert( isSorted(insertionSort(case.copy())) )
+        assert( isSorted(insertionSortBinarySearch(case.copy())) )
+        assert( isSorted(insertionSortBisect(case.copy())) )
 
         # Bubble Sort
-        assert( isSorted(bubbleSort(case)) )
+        assert( isSorted(bubbleSort(case.copy())) )
 
         # Selection Sort
-        assert( isSorted(selectionSort(case)) )
+        assert( isSorted(selectionSort(case.copy())) )
 
         # Merge Sort
-        assert( isSorted(mergeSort(case)) )
+        assert( isSorted(mergeSort(case.copy())) )
+        
+        # Quick Sort
+        assert( isSorted(quickSort(case.copy())) )
 
         print()
