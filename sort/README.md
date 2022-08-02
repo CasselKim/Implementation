@@ -137,4 +137,4 @@ def heapify(arr, now, size) :
 ```
 
 ### result
-![image](heapSort.png)
+![image](heapSort.PNG)
