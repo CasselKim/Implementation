@@ -4,6 +4,7 @@ from bubbleSort import bubbleSort
 from selectionSort import selectionSort
 from mergeSort import mergeSort
 from quickSort import quickSort
+from heapSort import heapSort
 import random
 import time
 
@@ -44,5 +45,8 @@ if __name__ == "__main__" :
         
         # Quick Sort
         assert( isSorted(quickSort(case.copy())) )
+
+        # Heap Sort
+        assert( isSorted(heapSort(case.copy())) )
 
         print()
